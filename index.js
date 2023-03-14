@@ -17,6 +17,7 @@ const unknownEndpoint = (request, response) => {
 app.use(express.json()); // JSON-parser for express. To takes JSON data from request.
 app.use(requestLogger);
 app.use(cors());
+app.use(express.static('build'));
 
 let notes = [
     {
